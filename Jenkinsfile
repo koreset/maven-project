@@ -17,6 +17,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to QA') {
+            steps {
+                bulld job: 'deploy-to-qa'
+            }
+        }
     }
 
 }
